@@ -24,8 +24,8 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-// Complete the sockMerchant function below.
-function sockMerchant(n, ar) {
+// Complete the countingValleys function below.
+function countingValleys(n, s) {
 
 
 }
@@ -35,9 +35,9 @@ function main() {
 
     const n = parseInt(readLine(), 10);
 
-    const ar = readLine().split(' ').map(arTemp => parseInt(arTemp, 10));
+    const s = readLine();
 
-    let result = sockMerchant(n, ar);
+    let result = countingValleys(n, s);
 
     ws.write(result + "\n");
 
