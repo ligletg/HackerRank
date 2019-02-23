@@ -26,8 +26,22 @@ function readLine() {
 
 // Complete the countingValleys function below.
 function countingValleys(n, s) {
-
-
+    let altitude = 0;
+    let previousAltitude = 0;
+    let valleyCount = 0;
+    const steps = s.split('');
+    steps.forEach(step => {
+        previousAltitude = altitude;
+        if (step === "U") {
+            altitude++;
+        } else {
+            altitude--;
+        }
+        if (altitude < 0 && previousAltitude >= 0) {
+            valleyCount++;
+        }
+    });
+    return valleyCount;
 }
 
 function main() {
